@@ -81,7 +81,7 @@ int bingoboard::draw_number()
 	do {
 		i = random() % BINGO_BOARD_SIZE + 1; // pick a random number from 1 to 85
 	}
-	while ((base[i] == 1) && (validdraws < 85));	// ensure not already drawn and still need a number drawn
+	while ((base[i] == 1) && (validdraws < BINGO_BOARD_SIZE));	// ensure not already drawn and still need a number drawn
 
 	validdraws++;
 	base[i] = 1; // number has been drawn

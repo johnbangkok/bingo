@@ -1,4 +1,4 @@
 bingo
 =====
 
-bingo - draws numbers randomly
+C++ bingo - draws numbers randomly

@@ -73,13 +73,21 @@ int bingoboard::draw_number()
 int main()
 {
 	bingoboard game;
+	int speed;
+
+	cout << "Welcome to Bingo number caller." << endl << "enter speed 1-10 where 1 is fastest (1 second pause between draws)" << endl;
+
+	do {
+		cin >> speed;
+	}
+	while ( (speed > 10) || (speed < 1));
 
 
 	for (int k=0; k<85; k++) {  // draw 85 numbers
 
 		game.draw_number();
 		game.disp_card();
-		sleep(2);
+		sleep(speed);
 	}
 
 	return 0;
